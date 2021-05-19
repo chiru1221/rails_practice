@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+    <tr>
+      <th>
+      <strong>Book:</strong>
+      </th>
+      <td>
+      <%= @review.book.title %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>Content:</strong>
+      </th>
+      <td>
+      <%= @review.content %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>Points:</strong>
+      </th>
+      <td>
+      <%= @review.points %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>User id:</strong>
+      </th>
+      <td>
+      <%= @review&.user&.userid %>
+      </td>
+    </tr>
+</table>
+<br>
+<div class='link'><%= link_to 'Edit', edit_review_path(@review) %></div>
+<br>
+<div class='link'><%= link_to 'Back', reviews_path %></div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookReview</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:login_error] %>
+      <p><%= flash[:login_error] %></p>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <p><%= flash[:alert] %></p>
+    <% end %>
+
+    <% if flash[:error] %>
+      <p><%= flash[:error] %></p>
+    <% end %>
+
+    <% if flash[:destroy_alert] %>
+      <p><%= flash[:destroy_alert] %></p>
+    <% end %>
+
+    <% if @current_user %>
+      <p>
+        You are logged in as <%= @current_user&.name %>.
+        (<%= link_to "Logout", logout_url, method: :delete %>)
+      </p>
+    <% else %>
+      <p>
+        You are not logged in.
+        (<%= link_to "Login", login_url %>)
+      </p>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

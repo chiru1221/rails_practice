@@ -1,0 +1,47 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+  font-family: 'monospace';
+}
+h1{
+  font-size: 24px;
+  color: deepskyblue;
+  width: 100%;
+  text-align: center;
+}
+
+*.link{
+  padding: 0 2px;
+  :hover{
+    color: cyan;
+    background-color: white;
+  }
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+  tr:hover{
+    background-color: #d4f0fd;
+    color: navy;
+  }
+
+  th, td {
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+  }
+}
+
+p{
+  strong {
+    color: deepskyblue;
+  }
+}

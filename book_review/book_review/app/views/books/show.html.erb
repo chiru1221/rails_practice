@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<table>
+    <tr>
+      <th>
+      <strong>Title:</strong>
+      </th>
+      <td>
+      <%= @book.title %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+      <strong>Publisher:</strong>
+      </th>
+      <td>
+      <%= @book.publisher %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+      <strong>Description:</strong>
+      </th>
+      <td>
+      <%= @book.description %>
+      </td>
+    </tr>
+</table>
+<br>
+<div class='link'><%= link_to 'Edit', edit_book_path(@book) %></div>
+<br>
+<div class='link'><%= link_to 'Back', books_path %></div>

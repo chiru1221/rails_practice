@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+    <tr>
+      <th>
+      <strong>Userid:</strong>
+      </th>
+      <td>
+      <%= @user.userid %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>Name:</strong>
+      </th>
+      <td>
+      <%= @user.name %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>Role:</strong>
+      </th>
+      <td>
+      <%= @user.role %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+      <strong>Email:</strong>
+      </th>
+      <td>
+      <%= @user.email %>
+      </td>
+    </tr>
+</table>
+
+<br>
+<% if @current_user&.id == @user.id %>
+  <div class='link'><%= link_to 'Edit', edit_user_path(@user) %></div>
+<% end %>
+<br>
+<% if @current_user %>
+  <div class='link'><%= link_to 'Back', users_path %></div>
+<% elsif %>
+  <div class='link'><%= link_to 'login', login_url %></div>
+<% end %>
